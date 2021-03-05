@@ -22,7 +22,7 @@ func DbConnect() (*gorm.DB, error) {
 	SSLMode := os.Getenv("SSL_MODE")
 	dbType := os.Getenv("DB_TYPE")
 
-	connectionString := fmt.Sprintf("host=%s user=%s dbname=%s sslmode=%s password=%s", dbHost, dbUser, dbName, SSLMode, dbPass)
+	connectionString := fmt.Sprintf("host=%s user=%s dbname=%s sslmode=%s password=%s", dbHost, dbUser, dbName, "disable", dbPass)
 
 	db, err := gorm.Open(dbType, connectionString)
 
